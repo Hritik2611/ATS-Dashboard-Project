@@ -1,16 +1,87 @@
-# React + Vite
+# ATS Dashboard UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and modern Applicant Tracking System (ATS) Dashboard built using React.js and Tailwind CSS.  
+This project was created as part of a frontend internship assignment to demonstrate frontend development skills, reusable component structure, responsive layouts, routing, and state management.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- User Login Page
+- Responsive Dashboard Layout
+- Sidebar Navigation
+- Mobile Hamburger Menu
+- Dashboard Summary Cards
+- Candidate Listing Page
+- Job Listing Page
+- Candidate Details Page
+- Dynamic Routing
+- Candidate Search & Filtering
+- Pagination
+- Hiring Analytics Chart
+- Reusable UI Components
+- Fully Responsive Design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- Tailwind CSS
+- React Router DOM
+- Recharts
+- React Icons
+- Vite
+
+---
+
+## Project Structure
+
+```bash
+src/
+│
+├── components/
+│   ├── AnalyticsChart.jsx
+│   ├── CandidateCard.jsx
+│   ├── CandidateTable.jsx
+│   ├── JobCard.jsx
+│   ├── Layout.jsx
+│   ├── Navbar.jsx
+│   ├── Pagination.jsx
+│   ├── Sidebar.jsx
+│   ├── StatusBadge.jsx
+│   └── SummaryCard.jsx
+│
+├── data/
+│   ├── candidatesData.js
+│   └── jobsData.js
+│
+├── pages/
+│   ├── CandidateDetails.jsx
+│   ├── CandidateListing.jsx
+│   ├── Dashboard.jsx
+│   ├── JobListing.jsx
+│   └── Login.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## Clone the repository
+git clone YOUR_GITHUB_REPOSITORY_LINK
+
+---
+
+## Move into the project folder
+cd ats-dashboard
+
+---
+
+## Install dependencies
+npm install
+
+## Start the development server
+npm run dev
