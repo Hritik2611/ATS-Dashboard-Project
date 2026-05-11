@@ -86,5 +86,3 @@ npm install
 ## Start the development server
 npm run dev
 
-## Link
-https://ats-dashboard-project.vercel.app/candidateListing
