@@ -87,4 +87,4 @@ npm install
 npm run dev
 
 ## Link
-ats-dashboard-project.vercel.app
+https://ats-dashboard-project.vercel.app/login
