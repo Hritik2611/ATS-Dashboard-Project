@@ -1,13 +1,6 @@
-function Pagination({
-  currentPage,
-  totalPages,
-  setCurrentPage,
-}) {
-
+function Pagination({ currentPage, totalPages, setCurrentPage }) {
   return (
-
     <div className="flex items-center justify-center gap-3 mt-10 flex-wrap">
-
       {/* Previous */}
 
       <button
@@ -21,7 +14,6 @@ function Pagination({
       {/* Page Numbers */}
 
       {[...Array(totalPages)].map((_, index) => (
-
         <button
           key={index}
           onClick={() => setCurrentPage(index + 1)}
@@ -37,7 +29,6 @@ function Pagination({
         >
           {index + 1}
         </button>
-
       ))}
 
       {/* Next */}
@@ -49,7 +40,6 @@ function Pagination({
       >
         Next
       </button>
-
     </div>
   );
 }

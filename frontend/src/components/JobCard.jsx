@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-function JobCard({id, title, company, location, applicants, type }) {
+function JobCard({ id, title, company, location, applicants, type }) {
   return (
     <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all duration-300 border border-slate-100">
       <div className="flex items-start justify-between">

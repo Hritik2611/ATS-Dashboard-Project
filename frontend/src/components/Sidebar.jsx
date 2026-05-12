@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router";
 
 function Sidebar({ isOpen, setIsOpen }) {
-
   const location = useLocation();
 
   const menuItems = [
@@ -20,9 +19,7 @@ function Sidebar({ isOpen, setIsOpen }) {
   ];
 
   return (
-
     <>
-    
       {/* Overlay */}
 
       {isOpen && (
@@ -46,7 +43,6 @@ function Sidebar({ isOpen, setIsOpen }) {
           
         `}
       >
-
         {/* Logo */}
 
         <h1 className="text-2xl font-bold mb-10 text-blue-400">
@@ -56,9 +52,7 @@ function Sidebar({ isOpen, setIsOpen }) {
         {/* Menu */}
 
         <div className="flex flex-col gap-3">
-
           {menuItems.map((item) => (
-
             <Link
               key={item.path}
               to={item.path}
@@ -75,13 +69,9 @@ function Sidebar({ isOpen, setIsOpen }) {
             >
               {item.name}
             </Link>
-
           ))}
-
         </div>
-
       </div>
-
     </>
   );
 }

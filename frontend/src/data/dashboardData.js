@@ -1,5 +1,3 @@
-
-
 export const summaryData = [
   {
     title: "Total Jobs",

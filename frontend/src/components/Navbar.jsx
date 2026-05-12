@@ -5,8 +5,6 @@ function Navbar({ setIsOpen }) {
 
   const navigate = useNavigate();
 
-  // Logout Function
-
   const handleLogout = () => {
 
     navigate("/login");

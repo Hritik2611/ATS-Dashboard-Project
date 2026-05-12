@@ -1,42 +1,37 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router";
+
 import StatusBadge from "./StatusBadge";
 
 function CandidateTable() {
-  const candidates = [
-    {
-      id: 1,
-      name: "Rahul Sharma",
-      role: "Frontend Developer",
-      score: 92,
-      status: "Selected",
-    },
-    {
-      id: 2,
-      name: "Priya Singh",
-      role: "UI/UX Designer",
-      score: 81,
-      status: "Interview",
-    },
-    {
-      id: 3,
-      name: "Aman Verma",
-      role: "Backend Developer",
-      score: 67,
-      status: "Rejected",
-    },
-    {
-      id: 4,
-      name: "Sneha Patel",
-      role: "React Developer",
-      score: 88,
-      status: "Interview",
-    },
-  ];
+  const [candidates, setCandidates] = useState([]);
+
+  // Fetch Candidates
+
+  useEffect(() => {
+    const fetchCandidates = async () => {
+      try {
+        const response = await fetch("/data/candidates.json");
+
+        const data = await response.json();
+
+        setCandidates(data.slice(0, 5));
+      } catch (error) {
+        console.log("Error fetching candidates:", error);
+      }
+    };
+    fetchCandidates();
+  }, []);
 
   return (
     <div className="bg-white mt-8 rounded-2xl shadow-md overflow-hidden">
+      {/* Header */}
+
       <div className="p-6 border-b">
         <h2 className="text-xl font-bold text-slate-700">Recent Candidates</h2>
       </div>
+
+      {/* Table */}
 
       <div className="overflow-x-auto">
         <table className="w-full min-w-[600px]">
@@ -54,22 +49,25 @@ function CandidateTable() {
 
           <tbody>
             {candidates.map((candidate) => (
-              <tr
+              <Link
                 key={candidate.id}
-                className="border-b hover:bg-slate-50 transition"
+                to={`/candidateDetails/${candidate.id}`}
+                className="contents"
               >
-                <td className="py-4 px-6 font-medium text-slate-700">
-                  {candidate.name}
-                </td>
+                <tr className="border-b hover:bg-slate-50 transition cursor-pointer">
+                  <td className="py-4 px-6 font-medium text-slate-700">
+                    {candidate.name}
+                  </td>
 
-                <td className="py-4 px-6 text-slate-600">{candidate.role}</td>
+                  <td className="py-4 px-6 text-slate-600">{candidate.role}</td>
 
-                <td className="py-4 px-6">{candidate.score}%</td>
+                  <td className="py-4 px-6">{candidate.score}%</td>
 
-                <td className="py-4 px-6">
-                  <StatusBadge status={candidate.status} />
-                </td>
-              </tr>
+                  <td className="py-4 px-6">
+                    <StatusBadge status={candidate.status} />
+                  </td>
+                </tr>
+              </Link>
             ))}
           </tbody>
         </table>
