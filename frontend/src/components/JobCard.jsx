@@ -1,4 +1,6 @@
-function JobCard({ title, company, location, applicants, type }) {
+import { Link } from "react-router";
+
+function JobCard({id, title, company, location, applicants, type }) {
   return (
     <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all duration-300 border border-slate-100">
       <div className="flex items-start justify-between">
@@ -19,9 +21,11 @@ function JobCard({ title, company, location, applicants, type }) {
         <p>👨‍💻 {applicants} Applicants</p>
       </div>
 
-      <button className="mt-6 w-full bg-slate-900 hover:bg-slate-800 text-white py-3 rounded-xl transition">
-        View Details
-      </button>
+      <Link to={`/jobDetails/${id}`}>
+        <button className="mt-6 w-full bg-slate-900 hover:bg-slate-800 text-white py-3 rounded-xl transition">
+          View Details
+        </button>
+      </Link>
     </div>
   );
 }

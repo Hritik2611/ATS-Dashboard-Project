@@ -66,6 +66,7 @@ function JobListing() {
           filteredJobs.map((job) => (
 
             <JobCard
+              id={job.id}
               key={job.id}
               title={job.title}
               company={job.company}

@@ -5,11 +5,11 @@ import Dashboard from "./pages/Dashboard.jsx";
 import JobListing from "./pages/JobListing.jsx";
 import CandidateListing from "./pages/CandidateListing.jsx";
 import CandidateDetails from "./pages/CandidateDetails.jsx";
+import JobDetails from "./pages/JobDetails.jsx";
 
 function App() {
   return (
     <>
-
       <Routes>
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path={"/login"} element={<Login />} />
@@ -17,6 +17,7 @@ function App() {
         <Route path={"/jobListing"} element={<JobListing />} />
         <Route path={"/candidateListing"} element={<CandidateListing />} />
         <Route path="/candidateDetails/:id" element={<CandidateDetails />} />
+        <Route path="/jobDetails/:id" element={<JobDetails />} />
       </Routes>
     </>
   );
