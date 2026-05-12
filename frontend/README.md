@@ -76,7 +76,7 @@ git clone YOUR_GITHUB_REPOSITORY_LINK
 ---
 
 ## Move into the project folder
-cd ats-dashboard
+cd frontend
 
 ---
 
