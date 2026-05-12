@@ -76,11 +76,7 @@ git clone YOUR_GITHUB_REPOSITORY_LINK
 ---
 
 ## Move into the project folder
-<<<<<<< HEAD
 cd frontend
-=======
-cd ats-dashboard
->>>>>>> 8f1435f (Updated code)
 
 ---
 
@@ -90,8 +86,5 @@ npm install
 ## Start the development server
 npm run dev
 
-<<<<<<< HEAD
 ## Link
 https://ats-dashboard-project.vercel.app/login
-=======
->>>>>>> 8f1435f (Updated code)

@@ -41,6 +41,16 @@ function Login() {
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
 
           <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            required 
+            value={formData.name}
+            onChange={handleChange}
+            className="px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 transition"
+          />
+
+          <input
             type="email"
             name="email"
             placeholder="Email Address"
